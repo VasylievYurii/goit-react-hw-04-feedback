@@ -1,0 +1,12 @@
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 4vh;
+}
+.header {
+    color:azure;
+    font-size: 4vh;
+    text-align: center;
+    text-transform: uppercase;
+}
