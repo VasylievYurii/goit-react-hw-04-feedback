@@ -10,10 +10,10 @@ export function App() {
     neutral: 0,
     bad: 0,
   });
-  const [isNoFeedbackClicked, setIsNoFeedbackClicked] = useState(true);
+  // const [isNoFeedbackClicked, setIsNoFeedbackClicked] = useState(true);
 
   function handleClick(e) {
-    setIsNoFeedbackClicked(false);
+    // setIsNoFeedbackClicked(false);
     setState(prevState => ({ ...prevState, [e]: prevState[e] + 1 }));
   }
 
@@ -32,6 +32,9 @@ export function App() {
     );
     return positiveFeedbackPercentage;
   }
+
+  const { good, neutral, bad } = state;
+  const isNoFeedbackClicked = good === 0 && neutral === 0 && bad === 0;
 
   return (
     <>
